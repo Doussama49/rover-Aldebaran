@@ -31,7 +31,7 @@ class Rover:
 
     def turn_left(self):
         directions = ['North', 'West', 'South', 'East']
-        self.direction = directions[(directions.index(self.direction) - 1) % 4]
+        self.direction = directions[(directions.index(self.direction) + 1) % 4]
 
     def turn_right(self):
         directions = ['North', 'East', 'South', 'West']
