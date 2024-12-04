@@ -2,10 +2,13 @@ Feature: initial calibration
 GIVEN    
 A Rover that just arrived on the planet
 
-WHEN    It is calibrated with initial coordinates (5, 5)
+WHEN    
+It is calibrated with initial coordinates (5, 5)
 
-THEN   It faces North
+THEN   
+It faces North
 
+-------------------------------------------------
 
 Feature: Going North
 GIVEN      
@@ -16,3 +19,53 @@ It goes forward
 
 THEN    
 Its new coordinates are (0, 1)
+
+-------------------------------------------------
+
+Feature: Going Sud
+GIVEN      
+A Rover at coordinates (0, 0) facing North
+
+WHEN    
+It goes Backward
+
+THEN    
+Its new coordinates are (0, -1)
+
+-------------------------------------------------
+
+Feature: turning left
+GIVEN      
+A Rover at coordinates (9, 9) facing Est
+
+WHEN    
+It turns left
+
+THEN    
+Its new coordinates are (9, 9) facing north
+
+-------------------------------------------------
+
+Feature: turning right
+GIVEN      
+A Rover at coordinates (5, 5) facing sud
+
+WHEN    
+It turns right
+
+THEN    
+Its new coordinates are (5, 5) facing ouest
+
+-------------------------------------------------
+
+Feature: turning right and going forward
+GIVEN      
+A Rover at coordinates (3, 3) facing north
+
+WHEN    
+It turns right 
+It goes forward
+
+THEN    
+Its new coordinates are (4, 3) facing est
+
