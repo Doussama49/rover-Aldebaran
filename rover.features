@@ -1,0 +1,18 @@
+Feature: initial calibration
+GIVEN    
+A Rover that just arrived on the planet
+
+WHEN    It is calibrated with initial coordinates (5, 5)
+
+THEN   It faces North
+
+
+Feature: Going North
+GIVEN      
+A Rover at coordinates (0, 0) facing North
+
+WHEN    
+It goes forward
+
+THEN    
+Its new coordinates are (0, 1)
