@@ -3,11 +3,29 @@ class Rover:
         self.x = x
         self.y = y
         self.direction = direction
+        self.order_list = []
 
     def calibrate(self, x, y):
         self.x = x
         self.y = y
         self.direction = 'North'
+    
+    def set_orders(self, order_list):
+        self.order_list = order_list
+
+    def apply_order(self):
+        for order in self.order_list:
+            match order:
+                case 'f':
+                    self.move_forward()
+                case 'b':
+                    self.move_backward()
+                case 'l': 
+                    self.turn_left()
+                case 'r':
+                    self.turn_right()
+
+        self.set_orders([])
 
     def move_forward(self):
         if self.direction == 'North':

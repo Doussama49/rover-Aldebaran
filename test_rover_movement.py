@@ -38,6 +38,13 @@ class TestRover(unittest.TestCase):
         self.rover.turn_right()
         self.rover.move_forward()
         self.assertPosition(4, 3, 'East')
+    
+
+    def test_commands_recieved(self):
+        self.rover.x, self.rover.y, self.rover.direction = 0, 0,  'North'
+        self.rover.set_orders(['f', 'f', 'l'])
+        self.rover.apply_order()
+        self.assertPosition(0,2, 'West')
 
 if __name__ == '__main__':
     unittest.main()
