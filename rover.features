@@ -71,19 +71,6 @@ Its new coordinates are (4, 3) facing est
 
 -------------------------------------------------
 
-Feature : 
-GIVEN      
-A Rover at coordinates (3, 3) facing north
-
-WHEN    
-It turns right 
-It goes forward
-
-THEN    
-Its new coordinates are (4, 3) facing est
-
--------------------------------------------------
-
 Feature: The rover receives commands 
 GIVEN
 A Rover at coordinates (0, 0) facing north
@@ -93,5 +80,3 @@ A rover receive commands ([f,f,l])
 
 THEN
 A Rover at coordinates (0, 2) facing ouest
-
-
